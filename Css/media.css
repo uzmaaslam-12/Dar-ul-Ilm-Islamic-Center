@@ -1,0 +1,273 @@
+/* ========================== Responsive Enhancements ========================== */
+
+/* Medium devices (tablets, 768px and below) */
+@media (max-width: 768px) {
+  body{
+    font-size: 0.85rem;
+  }
+
+  #anouncment {
+    font-size: 0.5rem;
+  }
+
+  #logo {
+    height: 35px;
+    width: auto;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .hero-section {
+    height: 50vh;
+  }
+
+  .hero-img {
+    height: 50vh;
+  }
+
+  .hero-content {
+    top: 55%;
+  }
+
+  .hero-buttons {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .heading2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .heading3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    color: var(--dark-grey);
+    border-bottom: 2px solid var(--gold);
+    display: inline;
+  }
+
+  .about-line {
+    display: none;
+  }
+
+  .carousel-control-prev.custom-control {
+    left: 0;
+  }
+
+  .carousel-control-next.custom-control {
+    right: 0;
+  }
+
+  .sidebar-box {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .floating-whatsapp {
+    width: 1px !important;
+    height: 55px !important;
+    font-size: 24px;
+    bottom: 40px;
+  }
+
+  /* ===== Additional responsive adjustments ===== */
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+
+  /* Reduce heading size */
+  #pricing h3 {
+    font-size: 1.5rem;
+  }
+
+  #pricing p {
+    font-size: 0.95rem;
+  }
+
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+
+  #cta {
+    display: none;
+}
+  footer h5 {
+    font-size: 1rem;
+  }
+
+  footer ul li a {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+/* =================Small devices (mobile, 480px and below) =====================*/
+@media (max-width: 480px) {
+
+  #logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .floating-whatsapp {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 22px;
+    bottom: 30px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+
+  .hero-content {
+    top: 50%;
+    padding: 0 10px;
+  }
+
+
+  .heading2 {
+    font-size: 1.2rem;
+  }
+
+  .heading3 {
+    font-size: 1rem;
+  }
+
+  .sidebar-box {
+    padding: 10px;
+  }
+
+  #pricing h3 {
+    font-size: 1.2rem;
+  }
+
+  #pricing p {
+    font-size: 0.85rem;
+  }
+
+  .fee-tabs .nav-link {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+    margin-right: 2px;
+  }
+
+  .table thead th {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+
+  .table tbody td {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+
+
+  #pricing .small {
+    font-size: 0.7rem;
+  }
+
+  .accordion-button {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  .accordion-body {
+    font-size: 13px;
+  }
+
+  .testimonial-card p {
+    font-size: 14px;
+  }
+
+  footer h5 {
+    font-size: 0.9rem;
+  }
+
+  footer ul li a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra small devices (very small phones, 360px and below) */
+@media (max-width: 360px) {
+  
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .btn-gold {
+    font-size: 0.8rem;
+  }
+
+  .heading2 {
+    font-size: 1.1rem;
+  }
+
+  .heading3 {
+    font-size: 0.95rem;
+  }
+
+
+
+  #pricing h3 {
+    font-size: 1rem;
+  }
+  #pricing p {
+    font-size: 0.75rem;
+  }
+
+  .fee-tabs .nav-link {
+    font-size: 0.7rem;
+    padding: 3px 5px;
+  }
+
+  .table thead th,
+  .table tbody td {
+    font-size: 0.7rem;
+    padding: 3px 5px;
+  }
+
+  .table .btn-gold {
+    font-size: 0.65rem;
+    padding: 3px 5px;
+  }
+
+  #pricing .small {
+    font-size: 0.65rem;
+  }
+
+  .accordion-button {
+    font-size: 13px;
+  }
+
+  .accordion-body {
+    font-size: 12px;
+  }
+}
