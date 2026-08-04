@@ -83,31 +83,20 @@ document.addEventListener("DOMContentLoaded", () => {
       class_plan: classPlan
     };
 
-    try {
-      // --- Duplicate Email Check ---
-      const { data: existingEmails, error: fetchError } = await supabaseClient
-        .from('registrations')
-        .select('email')
-        .eq('email', email)
-        .limit(1);
-
-      if (fetchError) throw fetchError;
-
-      if (existingEmails.length > 0) {
-        Swal.fire('⚠️ Duplicate Email', 'This email is already registered.', 'warning');
-        return;
-      }
-
       // --- Insert into Supabase ---
-      const { data, error } = await supabaseClient
-        .from('registrations')
-        .insert([formData]);
+const { error } = await supabaseClient
+  .from('registrations')
+  .insert([formData]);
 
-      if (error) {
-        console.error("Supabase Error:", error);
-        Swal.fire('❌ Error', error.message, 'error');
-        return;
-      }
+if (error) {
+  console.error("Supabase Error:", error);
+  if (error.code === '23505' || error.message.includes('unique')) {
+    Swal.fire('⚠️ Duplicate Email', 'This email is already registered.', 'warning');
+  } else {
+    Swal.fire('❌ Error', error.message, 'error');
+  }
+  return;
+}
 
       // --- Success Notification ---
       Swal.fire({
