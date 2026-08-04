@@ -83,20 +83,21 @@ document.addEventListener("DOMContentLoaded", () => {
       class_plan: classPlan
     };
 
+try {
       // --- Insert into Supabase ---
-const { error } = await supabaseClient
-  .from('registrations')
-  .insert([formData]);
+      const { error } = await supabaseClient
+        .from('registrations')
+        .insert([formData]);
 
-if (error) {
-  console.error("Supabase Error:", error);
-  if (error.code === '23505' || error.message.includes('unique')) {
-    Swal.fire('⚠️ Duplicate Email', 'This email is already registered.', 'warning');
-  } else {
-    Swal.fire('❌ Error', error.message, 'error');
-  }
-  return;
-}
+      if (error) {
+        console.error("Supabase Error:", error);
+        if (error.code === '23505' || error.message.includes('unique')) {
+          Swal.fire('⚠️ Duplicate Email', 'This email is already registered.', 'warning');
+        } else {
+          Swal.fire('❌ Error', error.message, 'error');
+        }
+        return;
+      }
 
       // --- Success Notification ---
       Swal.fire({
